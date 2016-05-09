@@ -1,5 +1,20 @@
 Changelog
 =========
+
+2.9.0
+-----
+
+New features:
+
+- use margin position in linter to define pep8.MAX_LINE_LENGTH
+
+2.8.0
+-----
+
+Fixed bugs:
+
+- fix IndexError in calltips if cursor at the beginning of the last (empty) line
+
 2.7.0
 -----
 

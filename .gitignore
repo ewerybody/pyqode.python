@@ -31,8 +31,6 @@ nosetests.xml
 .pydevproject
 /.idea/
 __pycache__
-.cache
-.tox
 *.log
 htmlcov
 
@@ -46,5 +44,4 @@ deb_dist
 
 # hackedit project files
 .hackedit
-
-
+/.eggs/
