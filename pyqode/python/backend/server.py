@@ -36,8 +36,9 @@ if __name__ == '__main__':
 
     # add user paths to sys.path
     if args.syspath:
-        for path in args.syspath:     
-            sys.path.append(path)
+        for path in args.syspath:    
+            if path not in sys.path:
+                sys.path.append(path)
 
     from pyqode.core import backend
     from pyqode.python.backend.workers import JediCompletionProvider
