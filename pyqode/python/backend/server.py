@@ -36,8 +36,7 @@ if __name__ == '__main__':
 
     # add user paths to sys.path
     if args.syspath:
-        for path in args.syspath:
-            print('append path %s to sys.path' % path)
+        for path in args.syspath:     
             sys.path.append(path)
 
     from pyqode.core import backend

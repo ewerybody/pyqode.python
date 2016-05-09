@@ -300,7 +300,8 @@ class JediCompletionProvider:
     """
 
     @staticmethod
-    def complete(code, line, column, path, encoding, prefix):
+    def complete(code, line, column, path, encoding, mime_type, prefix, abs_pos):
+    #def complete(code, line, column, path, encoding, prefix):
         """
         Completes python code using `jedi`_.
 
@@ -309,8 +310,7 @@ class JediCompletionProvider:
         ret_val = []
         try:
             script = jedi.Script(code, line + 1, column, path, encoding)
-            completions = script.completions()
-            print('completions: %r' % completions)
+            completions = script.completions()        
         except jedi.NotFoundError:
             completions = []
         for completion in completions:
